@@ -9,7 +9,7 @@ Pure TypeScript text processing toolkit — 15 tools for case conversion, slug g
 
 Extracted from the client-side engines at [peasytext.com](https://peasytext.com), where all 15 text tools run entirely in the browser. This package provides the same functionality for Node.js, Deno, Bun, and browser environments.
 
-> **Try the interactive tools at [peasytext.com](https://peasytext.com)** — [Text Case Converter](https://peasytext.com/tools/text-case-converter/), [Word Counter](https://peasytext.com/tools/word-counter/), [Slug Generator](https://peasytext.com/tools/slug-generator/), [Base64 Encoder](https://peasytext.com/tools/base64-encoder-decoder/), [JSON Formatter](https://peasytext.com/tools/json-formatter/)
+> **Try the interactive tools at [peasytext.com](https://peasytext.com)** — [Text Case Converter](https://peasytext.com/tools/text-case-converter/), [Word Counter](https://peasytext.com/tools/word-counter/), [Slug Generator](https://peasytext.com/tools/slug-generator/), [Base64 Encoder](https://peasytext.com/tools/base64-encode-decode/), [JSON Formatter](https://peasytext.com/tools/json-formatter/)
 
 ## Table of Contents
 
@@ -99,7 +99,7 @@ console.log(toCase("user full name", "snake"));     // "user_full_name"
 console.log(toCase("user full name", "constant"));  // "USER_FULL_NAME"
 ```
 
-Learn more: [Text Case Converter](https://peasytext.com/tools/text-case-converter/)
+Learn more: [Text Case Converter](https://peasytext.com/tools/text-case-converter/) · [Case Conversion Glossary](https://peasytext.com/glossary/)
 
 ### Slug Generation
 
@@ -117,7 +117,7 @@ console.log(slugify("Hello World", { separator: "_" }));             // "hello_w
 console.log(slugify("A very long title here", { maxLength: 10 }));   // "a-very"
 ```
 
-Learn more: [Slug Generator](https://peasytext.com/tools/slug-generator/)
+Learn more: [Slug Generator Tool](https://peasytext.com/tools/slug-generator/) · [What is a URL Slug?](https://peasytext.com/glossary/url-slug/)
 
 ### Text Statistics
 
@@ -133,7 +133,7 @@ console.log(stats.paragraphs);   // 2
 console.log(stats.readingTime);  // "< 1 min"
 ```
 
-Learn more: [Word Counter](https://peasytext.com/tools/word-counter/)
+Learn more: [Word Counter Tool](https://peasytext.com/tools/word-counter/) · [Text Statistics Guide](https://peasytext.com/guides/)
 
 ### Line Sorting
 
@@ -148,6 +148,8 @@ console.log(sortLines(text, "length"));       // apple\nbanana\ncherry
 console.log(sortLines("10\n2\n30", "numeric"));  // 2\n10\n30
 ```
 
+Learn more: [Sort Lines Tool](https://peasytext.com/tools/sort-lines/)
+
 ### Base64 Encoding
 
 Encode and decode Base64 with full UTF-8 support — handles emoji, CJK characters, and all Unicode. Works in both browser (using `btoa`/`atob` + `TextEncoder`) and Node.js (using `Buffer`).
@@ -160,7 +162,7 @@ console.log(encoded);                    // "SGVsbG8sIOS4lueVjCEg8J+MjQ=="
 console.log(base64Decode(encoded));      // "Hello, 世界! 🌍"
 ```
 
-Learn more: [Base64 Encoder/Decoder](https://peasytext.com/tools/base64-encoder-decoder/)
+Learn more: [Base64 Encoder/Decoder](https://peasytext.com/tools/base64-encode-decode/) · [What is Base64?](https://peasytext.com/glossary/base64/)
 
 ### URL & HTML Encoding
 
@@ -176,6 +178,8 @@ console.log(urlDecode("hello%20world"));     // "hello world"
 console.log(htmlEncode('<script>alert("xss")</script>'));
 // "&lt;script&gt;alert(&quot;xss&quot;)&lt;/script&gt;"
 ```
+
+Learn more: [URL Encoder/Decoder](https://peasytext.com/tools/url-encode-decode/) · [HTML Entity Encoder](https://peasytext.com/tools/html-entity-encoder/)
 
 ### Find & Replace
 
@@ -193,6 +197,8 @@ console.log(findReplace("abc123def456", "\\d+", "NUM", { regex: true }));
 // "abcNUMdefNUM"
 ```
 
+Learn more: [Find & Replace Tool](https://peasytext.com/tools/find-and-replace/)
+
 ### Deduplication
 
 Remove duplicate lines while preserving original order.
@@ -203,6 +209,8 @@ import { dedupeLines } from "peasytext";
 console.log(dedupeLines("apple\nbanana\napple\ncherry\nbanana"));
 // "apple\nbanana\ncherry"
 ```
+
+Learn more: [Remove Duplicate Lines Tool](https://peasytext.com/tools/remove-duplicate-lines/)
 
 ### Line Numbers
 
@@ -218,6 +226,8 @@ console.log(removeLineNumbers("1: first\n2: second\n3: third"));
 // "first\nsecond\nthird"
 ```
 
+Learn more: [Add/Remove Line Numbers Tool](https://peasytext.com/tools/line-numbers/)
+
 ### Pattern Extraction
 
 Extract emails, URLs, phone numbers, IP addresses, hashtags, and @mentions from any text using built-in regex patterns.
@@ -230,6 +240,8 @@ console.log(extract(text, "emails"));   // ["info@example.com"]
 console.log(extract(text, "urls"));     // ["https://example.com,"]
 console.log(extract(text, "phones"));   // ["+1-555-0123"]
 ```
+
+Learn more: [Text Extractor Tool](https://peasytext.com/tools/text-extractor/)
 
 ### Text Diffing
 
@@ -244,6 +256,8 @@ console.log(result.removed);     // ["apple"]
 console.log(result.similarity);  // 0.6667
 ```
 
+Learn more: [Text Diff Tool](https://peasytext.com/tools/text-diff/)
+
 ### Lorem Ipsum
 
 Generate placeholder text by words, sentences, or paragraphs.
@@ -254,6 +268,8 @@ import { loremIpsum } from "peasytext";
 console.log(loremIpsum(10, "words"));       // 10 lorem ipsum words
 console.log(loremIpsum(3, "paragraphs"));   // 3 paragraphs of text
 ```
+
+Learn more: [Lorem Ipsum Generator](https://peasytext.com/tools/lorem-ipsum-generator/)
 
 ### JSON Formatting
 
@@ -267,7 +283,7 @@ console.log(jsonMinify('{ "a": 1 }'));      // '{"a":1}'
 console.log(jsonValidate('{"key": "ok"}')); // true
 ```
 
-Learn more: [JSON Formatter](https://peasytext.com/tools/json-formatter/)
+Learn more: [JSON Formatter Tool](https://peasytext.com/tools/json-formatter/) · [What is JSON?](https://peasytext.com/glossary/json/)
 
 ### Text Reversal
 
@@ -280,6 +296,8 @@ console.log(reverseText("hello", "characters"));     // "olleh"
 console.log(reverseText("hello world", "words"));     // "world hello"
 console.log(reverseText("a\nb\nc", "lines"));         // "c\nb\na"
 ```
+
+Learn more: [Reverse Text Tool](https://peasytext.com/tools/reverse-text/)
 
 ## API Reference
 
@@ -326,8 +344,10 @@ import type {
 
 ## Learn More About Text Processing
 
-- **Tools**: [Text Case Converter](https://peasytext.com/tools/text-case-converter/) · [Word Counter](https://peasytext.com/tools/word-counter/) · [Slug Generator](https://peasytext.com/tools/slug-generator/) · [Base64 Encoder](https://peasytext.com/tools/base64-encoder-decoder/)
-- **Guides**: [Text Processing Guide](https://peasytext.com/guides/) · [Glossary](https://peasytext.com/glossary/)
+- **Tools**: [Text Case Converter](https://peasytext.com/tools/text-case-converter/) · [Word Counter](https://peasytext.com/tools/word-counter/) · [Slug Generator](https://peasytext.com/tools/slug-generator/) · [Base64 Encoder/Decoder](https://peasytext.com/tools/base64-encode-decode/) · [JSON Formatter](https://peasytext.com/tools/json-formatter/)
+- **Reference**: [Text Processing Glossary](https://peasytext.com/glossary/) · [File Formats](https://peasytext.com/formats/)
+- **Guides**: [Text Processing Guides](https://peasytext.com/guides/) · [Use Cases](https://peasytext.com/use-cases/)
+- **API**: [REST API Docs](https://peasytext.com/developers/) · [OpenAPI Spec](https://peasytext.com/api/openapi.json)
 - **Hub**: [Peasy Tools](https://peasytools.com) — 255 free browser-based tools across 16 categories
 - **Python**: [PyPI Package](https://pypi.org/project/peasytext/)
 
@@ -336,7 +356,7 @@ import type {
 | Platform | Install | Link |
 |----------|---------|------|
 | **PyPI** | `pip install peasytext` | [PyPI](https://pypi.org/project/peasytext/) |
-| **MCP** | `uvx --from "peasytext[mcp]" python -m peasytext.mcp_server` | [Config](#) |
+| **MCP** | `uvx --from "peasytext[mcp]" python -m peasytext.mcp_server` | [Config](https://pypi.org/project/peasytext/#mcp-server-claude-cursor-windsurf) |
 
 ## Peasy Developer Tools
 
@@ -344,7 +364,7 @@ import type {
 |---------|------|-----|-------------|
 | **peasytext** | [PyPI](https://pypi.org/project/peasytext/) | [npm](https://www.npmjs.com/package/peasytext) | **Text processing toolkit — 15 tools** — [peasytext.com](https://peasytext.com) |
 
-More packages coming soon for all 15 Peasy categories (PDF, Image, Dev, CSS, SEO, Math, and more).
+More packages coming soon for all 16 Peasy categories (PDF, Image, Dev, CSS, SEO, Math, and more). See the full tool suite at [peasytools.com](https://peasytools.com).
 
 ## License
 
