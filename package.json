@@ -1,0 +1,54 @@
+{
+  "name": "peasytext",
+  "version": "0.1.0",
+  "description": "Pure TypeScript text processing toolkit — 15 tools for case conversion, slug generation, word counting, line sorting, Base64/URL/HTML encoding, find & replace, deduplication, line numbering, pattern extraction, text diffing, Lorem Ipsum generation, JSON formatting, and text reversal. Zero dependencies.",
+  "type": "module",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsup src/index.ts --format esm --dts",
+    "test": "vitest run",
+    "typecheck": "tsc --noEmit"
+  },
+  "keywords": [
+    "text",
+    "string",
+    "case-converter",
+    "slug",
+    "word-count",
+    "base64",
+    "url-encode",
+    "html-entities",
+    "find-replace",
+    "deduplicate",
+    "line-numbers",
+    "extract",
+    "diff",
+    "lorem-ipsum",
+    "json-formatter",
+    "reverse",
+    "text-processing"
+  ],
+  "author": "Peasy Tools",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/peasytools/peasytext-js.git"
+  },
+  "homepage": "https://peasytext.com",
+  "devDependencies": {
+    "@types/node": "^25.4.0",
+    "tsup": "^8.0",
+    "typescript": "^5.7",
+    "vitest": "^3.0"
+  }
+}
