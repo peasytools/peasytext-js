@@ -11,6 +11,10 @@ Extracted from the client-side engines at [peasytext.com](https://peasytext.com)
 
 > **Try the interactive tools at [peasytext.com](https://peasytext.com)** — [Text Case Converter](https://peasytext.com/tools/text-case-converter/), [Word Counter](https://peasytext.com/tools/word-counter/), [Slug Generator](https://peasytext.com/tools/slug-generator/), [Base64 Encoder](https://peasytext.com/tools/base64-encode-decode/), [JSON Formatter](https://peasytext.com/tools/json-formatter/)
 
+<p align="center">
+  <img src="demo.gif" alt="peasytext demo — case conversion, slug generation, word counting in terminal" width="800">
+</p>
+
 ## Table of Contents
 
 - [Install](#install)
