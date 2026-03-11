@@ -9,7 +9,7 @@ Pure TypeScript text processing toolkit — 15 tools for case conversion, slug g
 
 Extracted from the client-side engines at [peasytext.com](https://peasytext.com), where all 15 text tools run entirely in the browser. This package provides the same functionality for Node.js, Deno, Bun, and browser environments.
 
-> **Try the interactive tools at [peasytext.com](https://peasytext.com)** — [Text Case Converter](https://peasytext.com/tools/text-case-converter/), [Word Counter](https://peasytext.com/tools/word-counter/), [Slug Generator](https://peasytext.com/tools/slug-generator/), [Base64 Encoder](https://peasytext.com/tools/base64-encode-decode/), [JSON Formatter](https://peasytext.com/tools/json-formatter/)
+> **Try the interactive tools at [peasytext.com](https://peasytext.com)** — text case conversion, word counting, slug generation, Base64 encoding, JSON formatting, and 10 more tools
 
 <p align="center">
   <img src="demo.gif" alt="peasytext demo — case conversion, slug generation, word counting in terminal" width="800">
@@ -103,7 +103,7 @@ console.log(toCase("user full name", "snake"));     // "user_full_name"
 console.log(toCase("user full name", "constant"));  // "USER_FULL_NAME"
 ```
 
-Learn more: [Text Case Converter](https://peasytext.com/tools/text-case-converter/) · [Case Conversion Glossary](https://peasytext.com/glossary/)
+Learn more: [PeasyText](https://peasytext.com) · [Text Processing Glossary](https://peasytext.com/glossary/)
 
 ### Slug Generation
 
@@ -121,7 +121,7 @@ console.log(slugify("Hello World", { separator: "_" }));             // "hello_w
 console.log(slugify("A very long title here", { maxLength: 10 }));   // "a-very"
 ```
 
-Learn more: [Slug Generator Tool](https://peasytext.com/tools/slug-generator/) · [What is a URL Slug?](https://peasytext.com/glossary/url-slug/)
+Learn more: [PeasyText](https://peasytext.com) · [URL Slug](https://peasytext.com/glossary/)
 
 ### Text Statistics
 
@@ -137,7 +137,7 @@ console.log(stats.paragraphs);   // 2
 console.log(stats.readingTime);  // "< 1 min"
 ```
 
-Learn more: [Word Counter Tool](https://peasytext.com/tools/word-counter/) · [Text Statistics Guide](https://peasytext.com/guides/)
+Learn more: [PeasyText](https://peasytext.com) · [Text Processing Guides](https://peasytext.com/guides/)
 
 ### Line Sorting
 
@@ -152,7 +152,7 @@ console.log(sortLines(text, "length"));       // apple\nbanana\ncherry
 console.log(sortLines("10\n2\n30", "numeric"));  // 2\n10\n30
 ```
 
-Learn more: [Sort Lines Tool](https://peasytext.com/tools/sort-lines/)
+Learn more: [PeasyText](https://peasytext.com)
 
 ### Base64 Encoding
 
@@ -166,7 +166,7 @@ console.log(encoded);                    // "SGVsbG8sIOS4lueVjCEg8J+MjQ=="
 console.log(base64Decode(encoded));      // "Hello, 世界! 🌍"
 ```
 
-Learn more: [Base64 Encoder/Decoder](https://peasytext.com/tools/base64-encode-decode/) · [What is Base64?](https://peasytext.com/glossary/base64/)
+Learn more: [PeasyText](https://peasytext.com) · [Glossary](https://peasytext.com/glossary/)
 
 ### URL & HTML Encoding
 
@@ -183,7 +183,7 @@ console.log(htmlEncode('<script>alert("xss")</script>'));
 // "&lt;script&gt;alert(&quot;xss&quot;)&lt;/script&gt;"
 ```
 
-Learn more: [URL Encoder/Decoder](https://peasytext.com/tools/url-encode-decode/) · [HTML Entity Encoder](https://peasytext.com/tools/html-entity-encoder/)
+Learn more: [PeasyText](https://peasytext.com) · [Glossary](https://peasytext.com/glossary/)
 
 ### Find & Replace
 
@@ -201,7 +201,7 @@ console.log(findReplace("abc123def456", "\\d+", "NUM", { regex: true }));
 // "abcNUMdefNUM"
 ```
 
-Learn more: [Find & Replace Tool](https://peasytext.com/tools/find-and-replace/)
+Learn more: [PeasyText](https://peasytext.com)
 
 ### Deduplication
 
@@ -214,7 +214,7 @@ console.log(dedupeLines("apple\nbanana\napple\ncherry\nbanana"));
 // "apple\nbanana\ncherry"
 ```
 
-Learn more: [Remove Duplicate Lines Tool](https://peasytext.com/tools/remove-duplicate-lines/)
+Learn more: [PeasyText](https://peasytext.com)
 
 ### Line Numbers
 
@@ -230,7 +230,7 @@ console.log(removeLineNumbers("1: first\n2: second\n3: third"));
 // "first\nsecond\nthird"
 ```
 
-Learn more: [Add/Remove Line Numbers Tool](https://peasytext.com/tools/line-numbers/)
+Learn more: [PeasyText](https://peasytext.com)
 
 ### Pattern Extraction
 
@@ -245,7 +245,7 @@ console.log(extract(text, "urls"));     // ["https://example.com,"]
 console.log(extract(text, "phones"));   // ["+1-555-0123"]
 ```
 
-Learn more: [Text Extractor Tool](https://peasytext.com/tools/text-extractor/)
+Learn more: [PeasyText](https://peasytext.com)
 
 ### Text Diffing
 
@@ -260,7 +260,7 @@ console.log(result.removed);     // ["apple"]
 console.log(result.similarity);  // 0.6667
 ```
 
-Learn more: [Text Diff Tool](https://peasytext.com/tools/text-diff/)
+Learn more: [PeasyText](https://peasytext.com)
 
 ### Lorem Ipsum
 
@@ -273,7 +273,7 @@ console.log(loremIpsum(10, "words"));       // 10 lorem ipsum words
 console.log(loremIpsum(3, "paragraphs"));   // 3 paragraphs of text
 ```
 
-Learn more: [Lorem Ipsum Generator](https://peasytext.com/tools/lorem-ipsum-generator/)
+Learn more: [PeasyText](https://peasytext.com)
 
 ### JSON Formatting
 
@@ -287,7 +287,7 @@ console.log(jsonMinify('{ "a": 1 }'));      // '{"a":1}'
 console.log(jsonValidate('{"key": "ok"}')); // true
 ```
 
-Learn more: [JSON Formatter Tool](https://peasytext.com/tools/json-formatter/) · [What is JSON?](https://peasytext.com/glossary/json/)
+Learn more: [PeasyText](https://peasytext.com) · [Glossary](https://peasytext.com/glossary/)
 
 ### Text Reversal
 
@@ -301,7 +301,7 @@ console.log(reverseText("hello world", "words"));     // "world hello"
 console.log(reverseText("a\nb\nc", "lines"));         // "c\nb\na"
 ```
 
-Learn more: [Reverse Text Tool](https://peasytext.com/tools/reverse-text/)
+Learn more: [PeasyText](https://peasytext.com)
 
 ## API Reference
 
@@ -348,7 +348,7 @@ import type {
 
 ## Learn More About Text Processing
 
-- **Tools**: [Text Case Converter](https://peasytext.com/tools/text-case-converter/) · [Word Counter](https://peasytext.com/tools/word-counter/) · [Slug Generator](https://peasytext.com/tools/slug-generator/) · [Base64 Encoder/Decoder](https://peasytext.com/tools/base64-encode-decode/) · [JSON Formatter](https://peasytext.com/tools/json-formatter/)
+- **Tools**: [PeasyText](https://peasytext.com) — 15 text processing tools in the browser
 - **Reference**: [Text Processing Glossary](https://peasytext.com/glossary/) · [File Formats](https://peasytext.com/formats/)
 - **Guides**: [Text Processing Guides](https://peasytext.com/guides/) · [Use Cases](https://peasytext.com/use-cases/)
 - **API**: [REST API Docs](https://peasytext.com/developers/) · [OpenAPI Spec](https://peasytext.com/api/openapi.json)
