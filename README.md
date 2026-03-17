@@ -104,7 +104,7 @@ console.log(toCase("user full name", "snake"));     // "user_full_name"
 console.log(toCase("user full name", "constant"));  // "USER_FULL_NAME"
 ```
 
-Learn more: [PeasyText](https://peasytext.com) · [Text Processing Glossary](https://peasytext.com/glossary/)
+Learn more: [Text Case Converter](https://peasytext.com/text/text-case-converter/) · [Convert Case and Clean Text Guide](https://peasytext.com/guides/convert-case-clean-text/) · [What is Case Conversion?](https://peasytext.com/glossary/case-conversion/)
 
 ### Slug Generation
 
@@ -122,7 +122,7 @@ console.log(slugify("Hello World", { separator: "_" }));             // "hello_w
 console.log(slugify("A very long title here", { maxLength: 10 }));   // "a-very"
 ```
 
-Learn more: [PeasyText](https://peasytext.com) · [URL Slug](https://peasytext.com/glossary/)
+Learn more: [Slug Generator](https://peasytext.com/text/slug-generator/) · [Slug Generation and URL-Safe Strings](https://peasytext.com/guides/slug-generation-url-safe-strings/) · [What is a Slug?](https://peasytext.com/glossary/slug/)
 
 ### Text Statistics
 
@@ -138,7 +138,7 @@ console.log(stats.paragraphs);   // 2
 console.log(stats.readingTime);  // "< 1 min"
 ```
 
-Learn more: [PeasyText](https://peasytext.com) · [Text Processing Guides](https://peasytext.com/guides/)
+Learn more: [Text Counter](https://peasytext.com/text/text-counter/) · [Word Character Line Counting Best Practices](https://peasytext.com/guides/word-character-line-counting-best-practices/) · [What is Word Count?](https://peasytext.com/glossary/word-count/)
 
 ### Line Sorting
 
@@ -153,7 +153,7 @@ console.log(sortLines(text, "length"));       // apple\nbanana\ncherry
 console.log(sortLines("10\n2\n30", "numeric"));  // 2\n10\n30
 ```
 
-Learn more: [PeasyText](https://peasytext.com)
+Learn more: [Sort Lines Tool](https://peasytext.com/text/sort-lines/) · [How to Sort Text Lines](https://peasytext.com/guides/how-to-sort-text-lines/) · [What is Line Ending?](https://peasytext.com/glossary/line-ending/)
 
 ### Base64 Encoding
 
@@ -167,7 +167,7 @@ console.log(encoded);                    // "SGVsbG8sIOS4lueVjCEg8J+MjQ=="
 console.log(base64Decode(encoded));      // "Hello, 世界! 🌍"
 ```
 
-Learn more: [PeasyText](https://peasytext.com) · [Glossary](https://peasytext.com/glossary/)
+Learn more: [Base64 Encode Decode Tool](https://peasytext.com/text/base64-encode-decode/) · [Base64 Encoding Guide](https://peasytext.com/guides/base64-encoding-guide/) · [How to Encode Decode Base64](https://peasytext.com/guides/how-to-encode-decode-base64/)
 
 ### URL & HTML Encoding
 
@@ -184,7 +184,7 @@ console.log(htmlEncode('<script>alert("xss")</script>'));
 // "&lt;script&gt;alert(&quot;xss&quot;)&lt;/script&gt;"
 ```
 
-Learn more: [PeasyText](https://peasytext.com) · [Glossary](https://peasytext.com/glossary/)
+Learn more: [URL Encode Decode Tool](https://peasytext.com/text/url-encode-decode/) · [HTML Entity Encoder](https://peasytext.com/text/html-entity-encoder/) · [What is an Escape Character?](https://peasytext.com/glossary/escape-character/)
 
 ### Find & Replace
 
@@ -202,7 +202,7 @@ console.log(findReplace("abc123def456", "\\d+", "NUM", { regex: true }));
 // "abcNUMdefNUM"
 ```
 
-Learn more: [PeasyText](https://peasytext.com)
+Learn more: [Find and Replace Tool](https://peasytext.com/text/find-and-replace/) · [How to Find and Replace with Regex](https://peasytext.com/guides/how-to-find-replace-regex/) · [Regex Cheat Sheet Essential Patterns](https://peasytext.com/guides/regex-cheat-sheet-essential-patterns/)
 
 ### Deduplication
 
@@ -215,7 +215,7 @@ console.log(dedupeLines("apple\nbanana\napple\ncherry\nbanana"));
 // "apple\nbanana\ncherry"
 ```
 
-Learn more: [PeasyText](https://peasytext.com)
+Learn more: [Remove Duplicate Lines Tool](https://peasytext.com/text/remove-duplicate-lines/) · [How to Remove Duplicate Lines](https://peasytext.com/guides/how-to-remove-duplicate-lines/)
 
 ### Line Numbers
 
@@ -231,7 +231,7 @@ console.log(removeLineNumbers("1: first\n2: second\n3: third"));
 // "first\nsecond\nthird"
 ```
 
-Learn more: [PeasyText](https://peasytext.com)
+Learn more: [Line Numbers Tool](https://peasytext.com/text/line-numbers/) · [What is Plain Text?](https://peasytext.com/glossary/plain-text/) · [What is Whitespace?](https://peasytext.com/glossary/whitespace/)
 
 ### Pattern Extraction
 
@@ -246,7 +246,7 @@ console.log(extract(text, "urls"));     // ["https://example.com,"]
 console.log(extract(text, "phones"));   // ["+1-555-0123"]
 ```
 
-Learn more: [PeasyText](https://peasytext.com)
+Learn more: [Text Extractor Tool](https://peasytext.com/text/text-extractor/) · [How to Extract Data from Text](https://peasytext.com/guides/how-to-extract-data-from-text/) · [Regex Practical Guide](https://peasytext.com/guides/regex-practical-guide/)
 
 ### Text Diffing
 
@@ -261,7 +261,7 @@ console.log(result.removed);     // ["apple"]
 console.log(result.similarity);  // 0.6667
 ```
 
-Learn more: [PeasyText](https://peasytext.com)
+Learn more: [Text Diff Tool](https://peasytext.com/text/text-diff/) · [What is Text Diff?](https://peasytext.com/glossary/text-diff/) · [What is String Distance?](https://peasytext.com/glossary/string-distance/)
 
 ### Lorem Ipsum
 
@@ -274,7 +274,7 @@ console.log(loremIpsum(10, "words"));       // 10 lorem ipsum words
 console.log(loremIpsum(3, "paragraphs"));   // 3 paragraphs of text
 ```
 
-Learn more: [PeasyText](https://peasytext.com)
+Learn more: [Lorem Ipsum Generator](https://peasytext.com/text/lorem-ipsum-generator/) · [Lorem Ipsum Placeholder Text Guide](https://peasytext.com/guides/lorem-ipsum-placeholder-text-guide/) · [What is Lorem Ipsum?](https://peasytext.com/glossary/lorem-ipsum/)
 
 ### JSON Formatting
 
@@ -288,7 +288,7 @@ console.log(jsonMinify('{ "a": 1 }'));      // '{"a":1}'
 console.log(jsonValidate('{"key": "ok"}')); // true
 ```
 
-Learn more: [PeasyText](https://peasytext.com) · [Glossary](https://peasytext.com/glossary/)
+Learn more: [JSON Formatter Tool](https://peasytext.com/text/json-formatter/) · [What is Text Encoding?](https://peasytext.com/glossary/text-encoding/) · [JSON Format Reference](https://peasytext.com/formats/json/)
 
 ### Text Reversal
 
@@ -302,7 +302,7 @@ console.log(reverseText("hello world", "words"));     // "world hello"
 console.log(reverseText("a\nb\nc", "lines"));         // "c\nb\na"
 ```
 
-Learn more: [PeasyText](https://peasytext.com)
+Learn more: [Reverse Text Tool](https://peasytext.com/text/reverse-text/) · [What is ROT13?](https://peasytext.com/glossary/rot13/) · [What is Unicode?](https://peasytext.com/glossary/unicode/)
 
 ## API Reference
 
@@ -381,10 +381,10 @@ Full API documentation at [peasytext.com/developers/](https://peasytext.com/deve
 
 ## Learn More
 
-- **Tools**: [Text Counter](https://peasytext.com/text/text-counter/) · [Case Converter](https://peasytext.com/text/text-case-converter/) · [Slug Generator](https://peasytext.com/text/slug-generator/) · [All Tools](https://peasytext.com/)
-- **Guides**: [Text Encoding Guide](https://peasytext.com/guides/text-encoding-utf8-ascii/) · [Regex Cheat Sheet](https://peasytext.com/guides/regex-cheat-sheet-essential-patterns/) · [All Guides](https://peasytext.com/guides/)
-- **Glossary**: [ASCII](https://peasytext.com/glossary/ascii/) · [UTF-8](https://peasytext.com/glossary/) · [BOM](https://peasytext.com/glossary/bom/) · [All Terms](https://peasytext.com/glossary/)
-- **Formats**: [TXT](https://peasytext.com/formats/txt/) · [CSV](https://peasytext.com/formats/csv/) · [All Formats](https://peasytext.com/formats/)
+- **Tools**: [Text Counter](https://peasytext.com/text/text-counter/) · [Text Case Converter](https://peasytext.com/text/text-case-converter/) · [Sort Lines](https://peasytext.com/text/sort-lines/) · [Lorem Ipsum Generator](https://peasytext.com/text/lorem-ipsum-generator/) · [Slug Generator](https://peasytext.com/text/slug-generator/) · [Find and Replace](https://peasytext.com/text/find-and-replace/) · [Remove Duplicate Lines](https://peasytext.com/text/remove-duplicate-lines/) · [Base64 Encode Decode](https://peasytext.com/text/base64-encode-decode/) · [URL Encode Decode](https://peasytext.com/text/url-encode-decode/) · [JSON Formatter](https://peasytext.com/text/json-formatter/) · [HTML Entity Encoder](https://peasytext.com/text/html-entity-encoder/) · [Reverse Text](https://peasytext.com/text/reverse-text/) · [Line Numbers](https://peasytext.com/text/line-numbers/) · [Text Diff](https://peasytext.com/text/text-diff/) · [Text Extractor](https://peasytext.com/text/text-extractor/) · [All Tools](https://peasytext.com/)
+- **Guides**: [Text Encoding UTF-8 ASCII](https://peasytext.com/guides/text-encoding-utf8-ascii/) · [Regex Cheat Sheet Essential Patterns](https://peasytext.com/guides/regex-cheat-sheet-essential-patterns/) · [Lorem Ipsum Placeholder Text Guide](https://peasytext.com/guides/lorem-ipsum-placeholder-text-guide/) · [Regex Practical Guide](https://peasytext.com/guides/regex-practical-guide/) · [Base64 Encoding Guide](https://peasytext.com/guides/base64-encoding-guide/) · [Convert Case and Clean Text](https://peasytext.com/guides/convert-case-clean-text/) · [Word Character Line Counting Best Practices](https://peasytext.com/guides/word-character-line-counting-best-practices/) · [How to Find and Replace with Regex](https://peasytext.com/guides/how-to-find-replace-regex/) · [Slug Generation URL-Safe Strings](https://peasytext.com/guides/slug-generation-url-safe-strings/) · [Troubleshooting Line Endings CRLF LF](https://peasytext.com/guides/troubleshooting-line-endings-crlf-lf/) · [Troubleshooting Character Encoding](https://peasytext.com/guides/troubleshooting-character-encoding/) · [All Guides](https://peasytext.com/guides/)
+- **Glossary**: [ASCII](https://peasytext.com/glossary/ascii/) · [BOM](https://peasytext.com/glossary/bom/) · [Case Conversion](https://peasytext.com/glossary/case-conversion/) · [Diacritics](https://peasytext.com/glossary/diacritics/) · [Escape Character](https://peasytext.com/glossary/escape-character/) · [Line Ending](https://peasytext.com/glossary/line-ending/) · [Lorem Ipsum](https://peasytext.com/glossary/lorem-ipsum/) · [Normalization](https://peasytext.com/glossary/normalization-text/) · [Plain Text](https://peasytext.com/glossary/plain-text/) · [Slug](https://peasytext.com/glossary/slug/) · [Text Encoding](https://peasytext.com/glossary/text-encoding/) · [Unicode](https://peasytext.com/glossary/unicode/) · [Whitespace](https://peasytext.com/glossary/whitespace/) · [Word Count](https://peasytext.com/glossary/word-count/) · [All Terms](https://peasytext.com/glossary/)
+- **Formats**: [TXT](https://peasytext.com/formats/txt/) · [CSV](https://peasytext.com/formats/csv/) · [JSON](https://peasytext.com/formats/json/) · [HTML](https://peasytext.com/formats/html/) · [Markdown](https://peasytext.com/formats/md/) · [XML](https://peasytext.com/formats/xml/) · [YAML](https://peasytext.com/formats/yaml/) · [All Formats](https://peasytext.com/formats/)
 - **API**: [REST API Docs](https://peasytext.com/developers/) · [OpenAPI Spec](https://peasytext.com/api/openapi.json)
 
 ## Also Available
