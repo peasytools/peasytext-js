@@ -36,8 +36,9 @@ Extracted from the client-side engines at [peasytext.com](https://peasytext.com)
   - [Text Reversal](#text-reversal)
 - [API Reference](#api-reference)
 - [TypeScript Types](#typescript-types)
-- [Learn More About Text Processing](#learn-more-about-text-processing)
-- [Also Available for Python](#also-available-for-python)
+- [REST API Client](#rest-api-client)
+- [Learn More](#learn-more)
+- [Also Available](#also-available)
 - [Peasy Developer Tools](#peasy-developer-tools)
 - [License](#license)
 
@@ -346,30 +347,70 @@ import type {
 } from "peasytext";
 ```
 
-## Learn More About Text Processing
+## REST API Client
 
-- **Tools**: [PeasyText](https://peasytext.com) — 15 text processing tools in the browser
-- **Reference**: [Text Processing Glossary](https://peasytext.com/glossary/) · [File Formats](https://peasytext.com/formats/)
-- **Guides**: [Text Processing Guides](https://peasytext.com/guides/) · [Use Cases](https://peasytext.com/use-cases/)
+The API client connects to the [PeasyText developer API](https://peasytext.com/developers/) for tool discovery and content.
+
+```typescript
+import { PeasyTextClient } from "peasytext";
+
+const client = new PeasyTextClient();
+
+// List available tools
+const tools = await client.listTools();
+console.log(tools.results);
+
+// Search across all content
+const results = await client.search("case");
+console.log(results);
+
+// Browse the glossary
+const glossary = await client.listGlossary({ search: "format" });
+for (const term of glossary.results) {
+  console.log(`${term.term}: ${term.definition}`);
+}
+
+// Discover guides
+const guides = await client.listGuides({ category: "text" });
+for (const guide of guides.results) {
+  console.log(`${guide.title} (${guide.audience_level})`);
+}
+```
+
+Full API documentation at [peasytext.com/developers/](https://peasytext.com/developers/).
+
+## Learn More
+
+- **Tools**: [Text Case](https://peasytext.com/tools/text-case/) · [Text Slugify](https://peasytext.com/tools/text-slugify/) · [Text Word Count](https://peasytext.com/tools/text-word-count/) · [All Tools](https://peasytext.com/)
+- **Guides**: [Slugify Guide](https://peasytext.com/guides/slugify/) · [Case Conversion](https://peasytext.com/guides/case-conversion/) · [All Guides](https://peasytext.com/guides/)
+- **Glossary**: [Slugify](https://peasytext.com/glossary/slugify/) · [Case Conversion](https://peasytext.com/glossary/case-conversion/) · [All Terms](https://peasytext.com/glossary/)
+- **Formats**: [Base64](https://peasytext.com/formats/base64/) · [All Formats](https://peasytext.com/formats/)
 - **API**: [REST API Docs](https://peasytext.com/developers/) · [OpenAPI Spec](https://peasytext.com/api/openapi.json)
-- **Hub**: [Peasy Tools](https://peasytools.com) — 255 free browser-based tools across 16 categories
-- **Python**: [PyPI Package](https://pypi.org/project/peasytext/)
 
-## Also Available for Python
+## Also Available
 
-| Platform | Install | Link |
-|----------|---------|------|
-| **PyPI** | `pip install peasytext` | [PyPI](https://pypi.org/project/peasytext/) |
-| **MCP** | `uvx --from "peasytext[mcp]" python -m peasytext.mcp_server` | [Config](https://pypi.org/project/peasytext/#mcp-server-claude-cursor-windsurf) |
+| Language | Package | Install |
+|----------|---------|---------|
+| **Python** | [peasytext](https://pypi.org/project/peasytext/) | `pip install "peasytext[all]"` |
+| **Go** | [peasytext-go](https://pkg.go.dev/github.com/peasytools/peasytext-go) | `go get github.com/peasytools/peasytext-go` |
+| **Rust** | [peasytext](https://crates.io/crates/peasytext) | `cargo add peasytext` |
+| **Ruby** | [peasytext](https://rubygems.org/gems/peasytext) | `gem install peasytext` |
 
 ## Peasy Developer Tools
 
+Part of the [Peasy Tools](https://peasytools.com) open-source developer ecosystem.
+
 | Package | PyPI | npm | Description |
 |---------|------|-----|-------------|
-| **peasytext** | [PyPI](https://pypi.org/project/peasytext/) | [npm](https://www.npmjs.com/package/peasytext) | **Text processing toolkit — 15 tools** — [peasytext.com](https://peasytext.com) |
-
-More packages coming soon for all 16 Peasy categories (PDF, Image, Dev, CSS, SEO, Math, and more). See the full tool suite at [peasytools.com](https://peasytools.com).
+| peasy-pdf | [PyPI](https://pypi.org/project/peasy-pdf/) | [npm](https://www.npmjs.com/package/peasy-pdf) | PDF merge, split, rotate, compress, 21 operations — [peasypdf.com](https://peasypdf.com) |
+| peasy-image | [PyPI](https://pypi.org/project/peasy-image/) | [npm](https://www.npmjs.com/package/peasy-image) | Image resize, crop, convert, compress — [peasyimage.com](https://peasyimage.com) |
+| peasy-audio | [PyPI](https://pypi.org/project/peasy-audio/) | [npm](https://www.npmjs.com/package/peasy-audio) | Audio trim, merge, convert, normalize — [peasyaudio.com](https://peasyaudio.com) |
+| peasy-video | [PyPI](https://pypi.org/project/peasy-video/) | [npm](https://www.npmjs.com/package/peasy-video) | Video trim, resize, thumbnails, GIF — [peasyvideo.com](https://peasyvideo.com) |
+| peasy-css | [PyPI](https://pypi.org/project/peasy-css/) | [npm](https://www.npmjs.com/package/peasy-css) | CSS minify, format, analyze — [peasycss.com](https://peasycss.com) |
+| peasy-compress | [PyPI](https://pypi.org/project/peasy-compress/) | [npm](https://www.npmjs.com/package/peasy-compress) | ZIP, TAR, gzip compression — [peasytools.com](https://peasytools.com) |
+| peasy-document | [PyPI](https://pypi.org/project/peasy-document/) | [npm](https://www.npmjs.com/package/peasy-document) | Markdown, HTML, CSV, JSON conversion — [peasyformats.com](https://peasyformats.com) |
+| **peasytext** | **[PyPI](https://pypi.org/project/peasytext/)** | **[npm](https://www.npmjs.com/package/peasytext)** | **Text case conversion, slugify, word count — [peasytext.com](https://peasytext.com)** |
 
 ## License
 
-MIT — see [LICENSE](LICENSE).
+MIT
