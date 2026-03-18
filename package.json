@@ -1,6 +1,6 @@
 {
   "name": "peasytext",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "description": "Pure TypeScript text processing toolkit — 15 tools for case conversion, slug generation, word counting, line sorting, Base64/URL/HTML encoding, find & replace, deduplication, line numbering, pattern extraction, text diffing, Lorem Ipsum generation, JSON formatting, and text reversal. Zero dependencies.",
   "type": "module",
   "main": "dist/index.js",
