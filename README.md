@@ -13,7 +13,7 @@ Extracted from the client-side engines at [peasytext.com](https://peasytext.com)
 > **Try the interactive tools at [peasytext.com](https://peasytext.com)** — text case conversion, word counting, slug generation, Base64 encoding, JSON formatting, and 10 more tools
 
 <p align="center">
-  <img src="demo.gif" alt="peasytext demo — case conversion, slug generation, word counting in terminal" width="800">
+  <a href="https://agentgif.com/WmtS0Etx"><img src="https://media.agentgif.com/WmtS0Etx.gif" alt="peasytext demo — case conversion, slug generation, word counting in terminal" width="800"></a>
 </p>
 
 ## Table of Contents
